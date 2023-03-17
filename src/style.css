@@ -1,0 +1,52 @@
+body {
+  border-radius: 4px;
+  background-color: #f6f6f6;
+}
+
+main {
+  width: 600px;
+  padding: 4px;
+}
+
+h1.title {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.heading {
+  font-weight: 700;
+  background-color: #e2e2e2;
+}
+
+.tracked {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2px;
+  border: 2px solid #e2e2e2;
+  background-color: #e2e2e2;
+}
+
+.tracked > * {
+  padding: 2px 4px;
+}
+.tracked > *:not(.heading) {
+  background-color: white;
+}
+
+.events {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 2px;
+  border: 2px solid #e2e2e2;
+  background-color: #e2e2e2;
+  margin-top: 8px;
+}
+
+.events > * {
+  padding: 2px 4px;
+}
+.events > *:not(.heading) {
+  background-color: white;
+}

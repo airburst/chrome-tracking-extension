@@ -1,0 +1,33 @@
+{
+  "name": "Chopin Tracking Events",
+  "description": "Show all event triggers on a page",
+  "version": "0.1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_title": "Tracking",
+    "default_popup": "index.html"
+  },
+  "permissions": ["scripting", "tabs", "activeTab", "storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": ["https://*/*"],
+      "resources": ["get-window.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "32": "images/icon-32x32.png",
+    "48": "images/icon-48x48.png",
+    "72": "images/icon-72x72.png",
+    "96": "images/icon-96x96.png",
+    "128": "images/icon-128x128.png"
+  }
+}
